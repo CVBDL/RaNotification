@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaNotification.Data", "RaNo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaNotification.Sample", "RaNotification.Sample\RaNotification.Sample.csproj", "{92D81647-401A-4371-B198-962A55D6472C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaNotification.APIServer", "RaNotification.APIServer\RaNotification.APIServer.csproj", "{F605F14F-8261-46EC-9767-62BDD353FB68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +35,15 @@ Global
 		{92D81647-401A-4371-B198-962A55D6472C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92D81647-401A-4371-B198-962A55D6472C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92D81647-401A-4371-B198-962A55D6472C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F605F14F-8261-46EC-9767-62BDD353FB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F605F14F-8261-46EC-9767-62BDD353FB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F605F14F-8261-46EC-9767-62BDD353FB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F605F14F-8261-46EC-9767-62BDD353FB68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2068CB61-EC60-4CB7-BCB1-EB35F68C291E}
 	EndGlobalSection
 EndGlobal
