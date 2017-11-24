@@ -20,7 +20,7 @@ namespace RaNotification.APIServer.Controllers
                 var agent = new MailAgent(
                     new MailConfig
                     {
-                        SmtpServer = "mailrelay.ra.rockwell.com",
+                        SmtpServer = "*.com",
                         Port = 25
                     });
 
