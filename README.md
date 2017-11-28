@@ -18,13 +18,13 @@ Please see more details on `RaNotification.Sample` code.
   #### Example
   ```text
   {
-	  "From":"testSender@ralibrary",
-	  "To":["receiver@ra.rockwell.com"],
-	  "Cc":[],
-	  "Bcc":[],
-	  "Subject":"于老师，你真牛逼",
-	  "Body":"This is test body",
-	  "Attachments":
+    "From":"testSender@ralibrary",
+    "To":["receiver@ra.rockwell.com"],
+    "Cc":[],
+    "Bcc":[],
+    "Subject":"于老师，你真牛逼",
+    "Body":"This is test body",
+    "Attachments":
     [
       {
         "Name":"1.txt",
