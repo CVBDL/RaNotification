@@ -24,7 +24,8 @@ Please see more details on `RaNotification.Sample` code.
 	  "Bcc":[],
 	  "Subject":"于老师，你真牛逼",
 	  "Body":"This is test body",
-	  "Attachments":[
+	  "Attachments":
+    [
       {
         "Name":"1.txt",
         "Data":"dGhpcyBpcyBhdHRhY2htZW50IGRhdGE="
