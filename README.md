@@ -28,3 +28,14 @@ Please see more details on `RaNotification.Sample` code.
   }
   ```
 
+  #### Sample Code in C# to Generate Attachment
+  ```text
+  var entity = new MailEntity();
+  entity.From = "tester@*.com";
+  entity.To.Add("tester2@*.com");
+  entity.Subject = "This is test subject";
+  entity.Body = "This is test body";
+  entity.Attachments.Add(MailAttachment.FromString("1.txt", "this is attachment data"));
+  ```
+
+
