@@ -1,5 +1,6 @@
 # RA Notification
 
+<!--
 ## Nonification Data Transfter
 
 * The caller project should reference the **RaNotification.Data** project and create the transfer data instance by themselves.
@@ -7,30 +8,51 @@
 * After get the HTTP Post request, web server will call `INotifyData.Deserialize()` to reconstruct the transfer data.
 
 Please see more details on `RaNotification.Sample` code.
+-->
 
-## Notification Web API
+## Notification REST API
 
-* Send a Email notification
+### Email Notification
 
-  ```text
-  POST /ranotification/api/mailnotification
-  ```
-  #### Example
-  ```text
-  {
-    "From":"testSender@ralibrary",
-    "To":["receiver@ra.rockwell.com"],
-    "Cc":[],
-    "Bcc":[],
-    "Subject":"于老师，你真牛逼",
-    "Body":"This is test body",
-    "Attachments":
-    [
-      {
-        "Name":"1.txt",
-        "Data":"dGhpcyBpcyBhdHRhY2htZW50IGRhdGE="
-      }
-    ]
-  }
-  ```
+```text
+POST /api/mailnotification
+```
 
+#### Input
+
+| Name        | Type   | Description                                                       |
+| ----------- | ------ | ----------------------------------------------------------------- |
+| From        | string | Sender's email address.                                           |
+| To          | string | Receiver's email address.                                         |
+| Cc          | Array  | Carbon copy to secondary recipients.                              |
+| Bcc         | Array  | blind carbon copy to tertiary recipients who receive the message. |
+| Subject     | string | Email subject.                                                    |
+| Body        | string | Email message body.                                               |
+| Attachments | Array  | Attachments.                                                      |
+
+##### Attachment Format
+
+| Name     | Type   | Description                               |
+| -------- | ------ | ----------------------------------------- |
+| Name     | string | Attachment file name.                     |
+| Data     | string | Base64 encoded file content.              |
+
+#### Example
+
+```json
+{
+  "From":"no-reply@example.com",
+  "To":["example@example.com"],
+  "Cc":[],
+  "Bcc":[],
+  "Subject":"RaNotification Released!",
+  "Body":"Hi all, we're pleased to announce that RaNotification is released.",
+  "Attachments":
+  [
+    {
+      "Name":"readme.txt",
+      "Data":"dGhpcyBpcyBhdHRhY2htZW50IGRhdGE="
+    }
+  ]
+}
+```
