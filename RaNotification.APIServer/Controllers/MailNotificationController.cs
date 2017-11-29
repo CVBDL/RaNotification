@@ -24,7 +24,9 @@ namespace RaNotification.APIServer.Controllers
                         Port = 25
                     });
 
-                if(!agent.Send(entity))
+                CoerceEntity(entity);
+
+                if (!agent.Send(entity))
                 {
                     return BadRequest();
                 }
@@ -36,6 +38,15 @@ namespace RaNotification.APIServer.Controllers
                 return BadRequest(ex.Message);
             }
 
+        }
+
+        private void CoerceEntity(MailEntity entity)
+        {
+            if (entity == null)
+                return;
+
+            if (string.IsNullOrWhiteSpace(entity.From))
+                entity.From = "noreply-ranotification@ra.rockwell.com";
         }
     }
 }
