@@ -70,6 +70,7 @@ namespace RaNotification.Way.Mail
                 Subject = entity.Subject,
                 SubjectEncoding = Encoding.UTF8,
                 Body = entity.Body,
+                IsBodyHtml = entity.IsHtml,
                 BodyEncoding = Encoding.UTF8
             };
             entity.To.ForEach(t => message.To.Add(t));

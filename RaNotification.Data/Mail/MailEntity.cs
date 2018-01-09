@@ -23,6 +23,8 @@ namespace RaNotification.Data.Mail
         public string Subject { get; set; }
 
         public string Body { get; set; }
+        
+        public bool   IsHtml { get; set; }
 
         public List<MailAttachment> Attachments { get; set; }
     }

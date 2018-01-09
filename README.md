@@ -28,6 +28,7 @@ POST /api/mailnotification
 | Bcc         | Array  | blind carbon copy to tertiary recipients who receive the message. |
 | Subject     | string | Email subject.                                                    |
 | Body        | string | Email message body.                                               |
+| IsHtml      | bool   | Send message body with html format.                                 |
 | Attachments | Array  | Attachments.                                                      |
 
 ##### Attachment Format
@@ -47,6 +48,7 @@ POST /api/mailnotification
   "Bcc":[],
   "Subject":"RaNotification Released!",
   "Body":"Hi all, we're pleased to announce that RaNotification is released.",
+  "IsHtml": false,
   "Attachments":
   [
     {
